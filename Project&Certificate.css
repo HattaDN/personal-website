@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900& display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #1f242d;
+    color: #fff;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    -webkit-animation: slideRight 1s ease forwards;
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--u));
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #7FFFD4;
+    text-decoration: underline ;
+}
+
+.Sertificate {
+    text-align: center;
+    margin-top: 30px;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    color: black;
+    animation: zoomIn 1s ease forwards;
+    -webkit-animation: zoomIn 1s ease forwards;
+}
+
+.h3p {
+    text-align: center;
+    padding-top: 100px;
+    animation:  floatImage 4s ease-in-out;
+    -webkit-animation:  floatImage 4s ease-in-out;
+}
+
+.Sertificate p {
+    text-align: center;
+    font-size: 20px;
+}
+
+.Sertificate img {
+    width: 250px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.box-kiri, .box-tengah, .box-kanan {
+    width: 300px;
+    height: 320px;
+    background-color:  #262d3b;
+    color: #fff;
+    text-align: center;
+    padding: 30px 30px;
+    margin: 70px 20px 20px 55px;
+    border-radius: 10px;
+    float: left;
+}
+
+.box-kiri:hover, .box-tengah:hover, .box-kanan:hover {
+    background-color: #7FFFD4;
+    color: #262d3b;
+}
+
+.aap {
+    text-align: center;
+    padding-top: 100px;
+    animation:  floatImage 4s ease-in-out;
+    -webkit-animation:  floatImage 4s ease-in-out;
+}
+
+.aap a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.aap a:hover {
+    color: #7FFFD4;
+}
+
+footer {
+    text-align: center;
+    background-color: transparent;
+    color: #fff;
+    padding-top: 100px;
+    font-family: 'Quicksand', 'sans
+}
+
+/* KEYFRAMES ANIMATION */
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-24px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .Sertificate {
+        flex-direction: column; /* Stack certificate boxes vertically */
+        align-items: center; /* Center align items */
+    }
+
+    .box-kiri, .box-tengah, .box-kanan {
+        width: 90%; /* Make boxes full width on small screens */
+        margin: 10px 0; /* Add margin for spacing */
+    }
+
+    .h3p {
+        padding-top: 50px; /* Adjust padding */
+    }
+}
